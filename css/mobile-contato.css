@@ -1,0 +1,151 @@
+@media screen and (max-width: 1320px){
+    footer{
+        font-size: 1rem;
+    }
+
+    section#footer-mapa > div{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+        align-items:center;
+    }
+
+    section#footer-mapa iframe{
+        margin-top:30px;
+    }
+}
+
+@media screen and (max-width: 1250px){
+
+    footer{
+        padding: 40px 50px;
+    }
+
+    footer section#footer-infos{
+        justify-content: center;
+    }
+
+    section#footer-infos p{
+        margin: 0 16px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; 
+    }
+    .boteco-tech img:first-child, .boteco-tech img:last-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+    section#formulario > div{
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+
+     h1 {
+        height: 50px;
+        width: 176px;
+        background: url("../imgs/logo.svg");
+        text-indent: -9999px;
+    }
+
+    section#footer-infos div,  section#footer-infos p{
+        display: none;
+    }
+
+    section#footer-sac{
+        flex-direction:column;
+    }
+
+    section#footer-sac h4{
+        margin-top: 21px;
+    }
+
+    div#mapa-site{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main h2{
+        font-size: 2.25rem;
+    }
+
+    .boteco-tech img:nth-child(2){
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 999px){
+    body{
+      overflow-x: hidden;
+    }
+    
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    
+    .nav-list li{
+      margin: 0;
+      opacity: 0;
+    }
+    
+    .mobile-menu{
+      display: block;
+    }
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 800px){
+    .boteco-tech img:nth-child(3){
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .boteco-tech img:nth-child(4){
+        display: none;
+    }
+
+    .boteco-tech img{
+        max-width: 26px;
+    }
+
+    section#episodios p{
+        text-align: center;
+    }
+
+    section#formulario{
+        padding: 75px;
+     }
+}
+
+@media screen and (min-width: 150px) and (max-width: 400px){
+
+    form input, form textarea{
+        width: 100%; 
+    }
+} 

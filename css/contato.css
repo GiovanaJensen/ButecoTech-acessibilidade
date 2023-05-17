@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+/*
+font-family: 'Archivo', sans-serif;
+font-family: roc-grotesk, sans-serif;
+*/
+
+:root {
+    font-size: 100%;
+    --corPrimaria:#FFD140;
+    --corSecundaria:#101920;
+    --corTerciaria:#3080E3;
+    --corQuartenaria:#FEF9F3;
+    --preenchimentoPadrao: 0 216px;
+    --fonteTitulo:roc-grotesk, sans-serif;
+    --fonteTexto:'Archivo', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* body {
+    max-width: ;
+    min-width: ;
+} */
+
+/* Cabeçalho */
+  
+header{
+    font-family: var(--fonteTexto);
+    background-color: var(--corQuartenaria);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+  
+nav a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+  
+.logo{
+    height: 50px;
+    width: 176px;
+    background: url("../imgs/logo.svg");
+    text-indent: -9999px;
+}
+  
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+  
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+  
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+  
+nav ul li{
+    margin-right: 10px;
+}
+  
+nav ul li a{
+    color: #999;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    padding: 0 10px;
+}
+  
+nav ul li a:hover{
+    font-weight: bold;
+    color: #000;
+}
+  
+nav ul li a:hover::after{
+    content: "";
+    position:absolute;
+    bottom:-8px;
+    left: 15px;
+    width:65%;
+    border-bottom:3px solid #307FE2;
+    border-radius: 50px;
+}
+  
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+  
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #FFD140;
+    margin: 8px;
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+  
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*MAIN*/
+main {
+    background-image:linear-gradient(to bottom right,rgba(3,30,63,0.9),rgba(3,30,63,0.2)), url(../imgs/background-image-contato.webp);
+}
+
+main > div#conteudo-principal {
+    padding: var(--preenchimentoPadrao);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+main h2{
+    font-size: 4.5rem;
+    font-family: var(--fonteTitulo);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 297px;
+    padding-bottom: 52px;
+    text-align: center;
+}
+
+main a {
+    font-family: var(--fonteTexto);
+    font-weight: 700;
+    /* display: flex; */
+    display: block;
+    /* justify-content: center; */
+    width: 280px;
+    text-align:center;
+    /* font-weight: bold; */
+    background-color: var(--corTerciaria);
+    color: var(--corQuartenaria);
+    padding: 21px 40px;
+    border-radius: 7px;
+    margin-bottom: 225px;
+    /* margin: 0 350px; */
+}
+
+
+.boteco-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 30px;
+    background-color: var(--corPrimaria);
+    padding: 27px 10px;
+    border: 2px solid var(--corSecundaria);
+    justify-content: center;
+}
+
+.boteco-tech img{
+    min-width: 126px;
+}   
+
+/*formulario*/
+section#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#formulario > div#container-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 104px;
+    padding: 50px 216px 300px 216px;
+    align-items: center;
+}
+
+section#formulario h4 {
+    font-family: var(--fonteTitulo);
+    font-size: 3rem;
+    margin-bottom: 38px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+}
+
+#error-recovery{
+    visibility: hidden;
+    text-align: center;
+    color: #000;
+}
+
+#error-recovery h4{
+    font-family: var(--fonteTitulo);
+    font-size: 1.875rem;
+    margin-top: 34px;
+    max-width: 484px;
+}
+
+#error-recovery ul{
+    margin-top: .625rem;
+}
+
+#error-recovery ul li{
+    font-family: var(--fonteTexto);
+    list-style: none;
+}
+
+section#formulario .form-control{
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+section#formulario .form-control label{
+    font-family: var(--fonteTexto);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+section#formulario .form-control i{
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+  
+section#formulario .form-control.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+  
+section#formulario .form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+  
+section#formulario .form-control small{
+    font-family: var(--fonteTexto);
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+  
+section#formulario .form-control.error small{
+    visibility: visible;
+}
+
+/* form input, form textarea{
+    width: 100%; 
+} */
+
+form textarea{
+    resize: none;
+}
+
+section#formulario form input::placeholder, section#formulario form textarea::placeholder{
+    color: #000;
+    font-size : 1rem;
+    font-weight: 600;
+    font-family: var(--fonteTexto);
+    text-transform: capitalize;
+}
+
+section#formulario form input, textarea{
+    padding: 22px 0 22px 40px;
+    border-radius: 12px;
+    border: 3px solid #000;
+}
+
+section#formulario form button {
+    background-color: var(--corPrimaria);
+    font-size: 1.563rem;
+    color: #000;
+    font-weight: bold;
+    height: 67px;
+    border-radius: 7px;
+    margin-top: 48px;
+}
+
+/* Rodape */
+
+footer {
+    background-color: var(--corSecundaria);
+    color: #C6C5CE;
+    padding: 60px 216px 100px 216px;
+    text-transform: capitalize;
+}
+
+footer h4{
+    font-family: var(--fonteTitulo);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+section#footer-infos{
+    font-family: var(--fonteTexto);
+    font-size:1.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-bottom: 40px;
+    border-bottom: 3px solid #5F5C6B;
+    margin-bottom: 60px;
+}
+
+section#footer-infos div{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+section#footer-infos div p{
+    margin-right: 40px;
+}
+
+section#footer-infos div a{
+    margin-left: 37px;
+}
+
+section#footer-infos div a img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+section#footer-mapa > div{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 209px;
+    align-items:center;
+}
+
+section#footer-mapa div#mapa-site{
+    display: flex;
+    column-gap: 128px;
+}
+
+section#footer-mapa div p, section#footer-sac p{
+    font-family: var(--fonteTexto);
+    font-size: 1.25rem;
+    color: #C6C5CE;
+    margin-bottom: 5px;
+}
+
+section#footer-mapa h4 {
+    margin-bottom: 36px;
+}
+
+section#footer-mapa div p, section#footer-sac p{
+    transition: all .45s ease;
+}
+
+section#footer-mapa div p:hover, section#footer-sac p:hover{
+    transform: translateX(5px);
+    color: #fff;
+}
+
+section#footer-mapa iframe{
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+section#footer-sac{
+    margin-top: 42px;
+    padding-bottom: 67px;
+    border-bottom: 3px solid #5F5C6B; 
+}
+
+section#footer-sac{
+    display: flex;
+    column-gap: 53px;
+}
+
+section#footer-sac h4{
+    margin-bottom: 16px;
+}
+
+section#footer-sac address, section#footer-mapa address{
+    font-style: normal;
+}
+
+section#footer-copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 54px;
+}
+
+section#footer-copyright p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #C6C5CE;
+}
+
+section#footer-copyright a{
+    font-family: var(--fonteTexto);
+    font-size: 1.25rem;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    width: 155px;
+    background-color: var(--corPrimaria);
+    color: #000;
+    border-radius: 160px;
+    padding: 14px 26px;
+}
+
+section#footer-copyright img {
+    margin-right: 8px;
+}

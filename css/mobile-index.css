@@ -1,0 +1,216 @@
+@media screen and (max-width: 1320px){
+    footer{
+        font-size: 1rem;
+    }
+
+    section#footer-mapa > div{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+        align-items:center;
+    }
+
+    section#footer-mapa iframe{
+        margin-top:30px;
+    }
+
+    section#episodios div ul{
+        grid-template-columns:repeat(2, 1fr);
+        column-gap:22px;
+        /* margin: 0 75px;  */
+    }
+
+    div#primeira-div h2, div#primeira-div p{
+        text-align: center;
+    }
+
+    div#primeira-div a{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    section#formulario{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section#formulario h4, section#formulario p{
+        text-align: center;
+    }
+
+    section#formulario h4{
+        font-size: 1.5rem;
+    }
+
+    section#formulario p{
+        font-size: 1rem;
+    }
+
+    div#personas{
+        margin-bottom: 107px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form > div{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1250px){
+
+    main > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #modelo{
+        margin-top: 64px;
+    }
+
+    div.div-cloud img{
+        margin-top: 62px;
+        min-width: 298px;
+    }
+
+    footer{
+        padding: 40px 50px;
+    }
+
+    footer section#footer-infos{
+        justify-content: center;
+    }
+
+    section#footer-infos p{
+        margin: 0 16px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    section#cloud > div#primeira-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boteco-tech img:first-child, .boteco-tech img:last-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 999px){
+    
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    
+    .nav-list li{
+      margin: 0;
+      opacity: 0;
+    }
+    
+    .mobile-menu{
+      display: block;
+    }
+}
+  
+
+
+@media screen and (max-width: 800px){
+
+    h1 {
+        height: 50px;
+        width: 176px;
+        background: url("../imgs/logo.svg");
+        text-indent: -9999px;
+    }
+
+    section#footer-infos div,  section#footer-infos p{
+        display: none;
+    }
+
+    section#footer-sac{
+        flex-direction:column;
+    }
+
+    section#footer-sac h4{
+        margin-top: 21px;
+    }
+
+    div#mapa-site{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boteco-tech img:nth-child(2){
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    main h2{
+        font-size: 2.5rem;
+    }
+
+    section#episodios div ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main a {
+        font-size: 0.6875rem;
+        width: 140px;
+        text-align: center;
+    }
+
+    .episodios p{
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px){
+
+    .boteco-tech img:nth-child(3){
+        display: none;
+    }
+
+    section#formulario {
+       padding: 138px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .boteco-tech img:nth-child(4){
+        display: none;
+    }
+
+    .boteco-tech img{
+        max-width: 26px;
+    }
+
+    section#episodios p{
+        text-align: center;
+    }
+
+    section#formulario{
+        padding: 75px;
+     }
+}
